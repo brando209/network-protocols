@@ -87,8 +87,32 @@ implementation{
 	command uint16_t List.size(){
 		return size;
 	}
+	
+	command uint16_t List.maxSize(){
+		return MAX_SIZE;
+	}
 
 	command t List.get(uint16_t position){
 		return container[position];
+	}
+		
+	command void List.remove(uint8_t position) {
+		uint8_t i;
+
+		if(size > 0) {
+			//Move everything beginning immediately after position to the left.
+			for(i = position; i<size-1; i++){
+				container[i] = container[i+1];
+			}
+			size--;
+		}
+	}
+	
+	command void List.replace(uint8_t position, t input) {
+		container[position] = input;
+	}
+	
+	command void List.empty() {
+		size = 0;
 	}
 }

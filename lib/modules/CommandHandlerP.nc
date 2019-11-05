@@ -19,6 +19,8 @@ module CommandHandlerP{
 }
 
 implementation{
+	uint8_t extractWord(char* string, char* word);
+
     task void processCommand(){
         if(! call Queue.empty()){
             CommandMsg *msg;
@@ -26,7 +28,10 @@ implementation{
             uint8_t* buff;
             message_t *raw_msg;
             void *payload;
-
+            
+            char commandString[3][32] = {{0}};
+			uint8_t commandLength = 0;
+			
             // Pop message out of queue.
             raw_msg = call Queue.dequeue();
             payload = call Packet.getPayload(raw_msg, sizeof(CommandMsg));
@@ -67,17 +72,50 @@ implementation{
                 dbg(COMMAND_CHANNEL, "Command Type: Route Table Dump\n");
                 signal CommandHandler.printRouteTable();
                 break;
-
+				//A test client command will have a destination as the first valve, 
+				//a source port and a destination port as the next two values
+				//and a transfer size(in bytes) as the next value
             case CMD_TEST_CLIENT:
-                dbg(COMMAND_CHANNEL, "Command Type: Client\n");
-                signal CommandHandler.setTestClient();
+                dbg(COMMAND_CHANNEL, "Command Type: Test Client\n");
+                signal CommandHandler.setTestClient(buff[0], buff[1], buff[2], buff[3]);
                 break;
-
+				//A test server command will have a port number as the only value
             case CMD_TEST_SERVER:
-                dbg(COMMAND_CHANNEL, "Command Type: Client\n");
-                signal CommandHandler.setTestServer();
+                dbg(COMMAND_CHANNEL, "Command Type: Test Server\n");
+                signal CommandHandler.setTestServer(buff[0]);
                 break;
-
+            case CMD_APP_CLIENT:
+            	dbg(COMMAND_CHANNEL, "Command Type: App Client\n");
+            	commandLength = extractWord(buff, commandString[0]);
+            	if(strcmp(commandString[0], "hello") == 0) {
+            		commandLength += extractWord(&buff[commandLength], commandString[1]);	//Extract username
+            		commandLength += extractWord(&buff[commandLength], commandString[2]);	//Extract port
+            		printf("%s %s %d\n", commandString[0], commandString[1], atoi(commandString[2]));
+            		signal CommandHandler.setAppClient(atoi(commandString[2]), (uint8_t*)commandString[1]);
+            	}
+            	else if(strcmp(commandString[0], "msg") == 0) {
+            		printf("%s %s\n", commandString[0], &buff[commandLength+1]);
+            		signal CommandHandler.broadcastAppClient(&buff[commandLength]);
+            	}
+            	else if(strcmp(commandString[0], "whisper") == 0) {
+            		commandLength += extractWord(&buff[commandLength], commandString[1]); 	//Extract username
+            		printf("%s %s %s\n", commandString[0], commandString[1], &buff[commandLength]);
+            		signal CommandHandler.unicastAppClient(&commandString[1], &buff[commandLength]);
+            	}
+            	else if(strcmp(commandString[0], "listusr") == 0) {
+            		signal CommandHandler.listAppUsers();
+            	}
+            	break;
+            case CMD_APP_SERVER:
+            	dbg(COMMAND_CHANNEL, "Command Type: App Server\n");
+            	signal CommandHandler.setAppServer(buff[0]);
+            	break;
+				//A close connection command will have a destinationn address as the first
+				//value, a source port as the second, and a destination port as the third
+			case CMD_KILL:
+				dbg(COMMAND_CHANNEL, "Command Type: Close Connenction\n");
+				signal CommandHandler.closeTestClient(buff[0], buff[1], buff[2]);
+				break;	
             default:
                 dbg(COMMAND_CHANNEL, "CMD_ERROR: \"%d\" does not match any known commands.\n", msg->id);
                 break;
@@ -89,6 +127,7 @@ implementation{
             post processCommand();
         }
     }
+    
     event message_t* Receive.receive(message_t* raw_msg, void* payload, uint8_t len){
         if (! call Pool.empty()){
             call Queue.enqueue(raw_msg);
@@ -96,5 +135,25 @@ implementation{
             return call Pool.get();
         }
         return raw_msg;
+    }
+    
+    uint8_t extractWord(char* string, char* word) {
+    	uint8_t count;
+    	
+ 		for(count = 0; TRUE; count++) {
+ 			if(string[count] == '\0') {
+ 				word[count] = '\0';
+ 				break;
+ 			}
+ 			
+ 			if(string[count] != ' ') {
+ 				word[count] = string[count];
+ 			}
+ 			else {
+ 				word[count] = '\0';
+ 				break;
+ 			}
+ 		}
+    	return count + 1;
     }
 }

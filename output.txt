@@ -1,0 +1,2268 @@
+Creating Topo!
+Number of Motes 8
+  1   2   -54.0
+  2   3   -54.0
+  3   4   -54.0
+  4   5   -54.0
+  5   6   -54.0
+  6   7   -54.0
+  7   8   -54.0
+  2   1   -54.0
+  3   2   -54.0
+  4   3   -54.0
+  5   4   -54.0
+  6   5   -54.0
+  7   6   -54.0
+  8   7   -54.0
+  1   8   -54.0
+  8   1   -54.0
+  3   7   -54.0
+  7   3   -54.0
+Creating noise model for  1
+Creating noise model for  2
+Creating noise model for  3
+Creating noise model for  4
+Creating noise model for  5
+Creating noise model for  6
+Creating noise model for  7
+Creating noise model for  8
+Adding Channel command
+Adding Channel general
+Adding Channel neighbor
+Adding Channel flooding
+Adding Channel transport
+0:0:0.000000133 DEBUG (1): Booted
+0:0:0.000000143 DEBUG (1): Radio On
+0:0:0.000000266 DEBUG (2): Booted
+0:0:0.000000276 DEBUG (2): Radio On
+0:0:0.000000399 DEBUG (3): Booted
+0:0:0.000000409 DEBUG (3): Radio On
+0:0:0.000000533 DEBUG (4): Booted
+0:0:0.000000543 DEBUG (4): Radio On
+0:0:0.000000666 DEBUG (5): Booted
+0:0:0.000000676 DEBUG (5): Radio On
+0:0:0.000000799 DEBUG (6): Booted
+0:0:0.000000809 DEBUG (6): Radio On
+0:0:0.000000933 DEBUG (7): Booted
+0:0:0.000000943 DEBUG (7): Radio On
+0:0:0.000001066 DEBUG (8): Booted
+0:0:0.000001076 DEBUG (8): Radio On
+
+0:1:37.178711891 DEBUG (1): A Command has been Issued.
+0:1:37.178711891 DEBUG (1): Command Type: Server
+0:1:37.178711891 DEBUG (1): Initiating Server at address 1
+0:1:37.178711891 DEBUG (1): Obtained socket: 1
+0:1:37.178711891 DEBUG (1): Binded to address: 1, port: 1
+0:1:37.178711891 DEBUG (1): Changed state of socket 1 to LISTEN
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+
+0:4:50.116211244 DEBUG (2): A Command has been Issued.
+0:4:50.116211244 DEBUG (2): Command Type: Client
+0:4:50.116211244 DEBUG (2): Initiating Client at address 2
+0:4:50.116211244 DEBUG (2): Obtained socket: 1
+0:4:50.116211244 DEBUG (2): Binded to address: 2, port: 2
+0:4:50.116211244 DEBUG (2): Attempting to connect to server at 1:1
+0:4:50.116211244 DEBUG (2): Changed state of socket 1 to SYN_SENT
+Setting up global buffer to transfer 255 byte(s)
+
+0:4:50.244751231 DEBUG (1): TCP Payload: src_port: 2, dest_port: 1, seq: 36, ack: 0, flags: 1, ad_win: 128
+0:4:50.244751231 DEBUG (1): SYN received from 2:2 with isn: 36
+Added new connection attempt information
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+New connection attempt from 2:2 to port 1
+0:4:57.178711080 DEBUG (1): Successfully bound new socket 2 to port 128
+0:4:57.178711080 DEBUG (1): Changed state of socket 2 to SYN_RCVD
+0:4:57.178711080 DEBUG (1): Sending SYN+ACK to 2:2
+Checking sockets for data to read
+
+0:4:57.213134894 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 0, ack: 36, flags: 3, ad_win: 128
+0:4:57.213134894 DEBUG (2): SYN+ACK received from 1:128
+0:4:57.213134894 DEBUG (2): Sending ACK to 1:128
+0:4:57.213134894 DEBUG (2): Changed state of socket 1 to ESTABLISHED
+(2) Connection Established with address 1, port 128 through socket 1, port 2
+
+0:4:57.477264629 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 37, ack: 0, flags: 2, ad_win: 128
+0:4:57.477264629 DEBUG (1): ACK received from 2:2 for sequence number 0
+0:4:57.477264629 DEBUG (1): Changed state of socket 2 to ESTABLISHED
+(1) Connection Established with address 2, port 2 through socket 2, port 128
+
+(2) Transport Send Timer Fired!
+	Socket 1 has no data to send
+(2) Timeout! Resend expired unacked packets
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+	Socket 2:
+===============(2) Client Write Timer fired================
+numToWrite = 128
+
+Socket 1 global buffer:
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(511)
+
+lastSent = 0, nextRead = 0
+Writing 128 values to global buffer 1 at index 0, starting with 1
+128 values written to global buffer 1
+
+Socket 1 global buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+currentPosition(0), lastWritten(127), lastRead(0), transferSize(383)
+
+Writing 128 values(from 1) at socket 1 send buffer index 0
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 0
+The end of the window is at 55
+It is safe to write 56 more values
+write() returning 56
+
+Client wants to write 72 values to socket 1 send buffer
+The next index to write is at 56
+The end of the window is at 55
+Cannot write past end of window, returning 0
+
+Socket 1 send buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+lastWritten(55), lastSent(0), lastAck(0)
+
+56 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(55), lastSent(0), lastAck(0)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 38
+			1 2 3 4 5 6 7 8 9 10 11 12 13 14 
+
+	 lastWritten(55), lastSent(13), lastAck(0)
+	 42 bytes left in buffer
+
+0:7:5.427246331 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 38, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 0
+
+Socket 2 receive buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+lastRcvd(13), lastRead(0), nextExpected(39)
+Sending ACK to 2:2 for sequence 38
+
+0:7:5.502075308 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 1, ack: 38, flags: 2, ad_win: 128
+0:7:5.502075308 DEBUG (2): ACK received from 1:128 for sequence number 38
+!!!!!!	!!!!!Okay to send at index 14
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(55), lastSent(13), lastAck(13)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 39
+			15 16 17 18 19 20 21 22 23 24 25 26 27 28 
+
+	 lastWritten(55), lastSent(27), lastAck(13)
+	 28 bytes left in buffer
+
+0:8:9.410919437 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 39, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 13
+
+Socket 2 receive buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 17 18 19 20 21 22 23 24 25 26 27 28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+lastRcvd(26), lastRead(0), nextExpected(40)
+Sending ACK to 2:2 for sequence 39
+
+0:8:9.554458721 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 2, ack: 39, flags: 2, ad_win: 128
+0:8:9.554458721 DEBUG (2): ACK received from 1:128 for sequence number 39
+!!!!!!	!!!!!Okay to send at index 28
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 28 values to read
+Next read is at 0
+ReadSize is 28
+Read 28 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 17 18 19 20 21 22 23 24 25 26 27 28 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  1  2  3  4  5  6  7  8  9  10  11  12  13  15  16  17  18  19  20  21  22  23  24  25  26  27  28  0 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 28
+
+Socket 1 global buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+currentPosition(0), lastWritten(127), lastRead(55), transferSize(383)
+
+lastSent = 27, nextRead = 56
+Writing 28 values to global buffer 1 at index 0, starting with 129
+28 values written to global buffer 1
+
+Socket 1 global buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+currentPosition(28), lastWritten(27), lastRead(55), transferSize(355)
+
+Writing 28 values(from 57) at socket 1 send buffer index 56
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 56
+The end of the window is at 83
+It is safe to write 28 more values
+write() returning 28
+
+Socket 1 send buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+lastWritten(83), lastSent(27), lastAck(27)
+
+28 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(83), lastSent(27), lastAck(27)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 40
+			29 30 31 32 33 34 35 36 37 38 39 40 41 42 
+
+	 lastWritten(83), lastSent(41), lastAck(27)
+	 42 bytes left in buffer
+
+0:9:13.283615379 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 40, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 27
+
+Socket 2 receive buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+lastRcvd(40), lastRead(27), nextExpected(41)
+Sending ACK to 2:2 for sequence 40
+
+0:9:13.328659156 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 3, ack: 40, flags: 2, ad_win: 128
+0:9:13.328659156 DEBUG (2): ACK received from 1:128 for sequence number 40
+!!!!!!	!!!!!Okay to send at index 42
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 14 values to read
+Next read is at 28
+ReadSize is 14
+Read 14 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 17 18 19 20 21 22 23 24 25 26 27 28 0 30 31 32 33 34 35 36 37 38 39 40 41 42 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  30  31  32  33  34  35  36  37  38  39  40  41  42  0 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 14
+
+Socket 1 global buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+currentPosition(28), lastWritten(27), lastRead(83), transferSize(355)
+
+lastSent = 41, nextRead = 84
+Writing 14 values to global buffer 1 at index 28, starting with 157
+14 values written to global buffer 1
+
+Socket 1 global buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+currentPosition(42), lastWritten(41), lastRead(83), transferSize(341)
+
+Writing 14 values(from 85) at socket 1 send buffer index 84
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 84
+The end of the window is at 97
+It is safe to write 14 more values
+write() returning 14
+
+Socket 1 send buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+lastWritten(97), lastSent(41), lastAck(41)
+
+14 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(97), lastSent(41), lastAck(41)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 41
+			43 44 45 46 47 48 49 50 51 52 53 54 55 56 
+
+	 lastWritten(97), lastSent(55), lastAck(41)
+	 42 bytes left in buffer
+
+0:10:17.470657578 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 41, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 41
+
+Socket 2 receive buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+lastRcvd(54), lastRead(41), nextExpected(42)
+Sending ACK to 2:2 for sequence 41
+
+0:10:17.751602311 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 4, ack: 41, flags: 2, ad_win: 128
+0:10:17.751602311 DEBUG (2): ACK received from 1:128 for sequence number 41
+!!!!!!	!!!!!Okay to send at index 56
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(97), lastSent(55), lastAck(55)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 42
+			57 58 59 60 61 62 63 64 65 66 67 68 69 70 
+
+	 lastWritten(97), lastSent(69), lastAck(55)
+	 28 bytes left in buffer
+
+0:11:21.485306061 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 42, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 55
+
+Socket 2 receive buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+lastRcvd(68), lastRead(41), nextExpected(43)
+Sending ACK to 2:2 for sequence 42
+
+0:11:21.703338746 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 5, ack: 42, flags: 2, ad_win: 128
+0:11:21.703338746 DEBUG (2): ACK received from 1:128 for sequence number 42
+!!!!!!	!!!!!Okay to send at index 70
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 28 values to read
+Next read is at 42
+ReadSize is 28
+Read 28 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 17 18 19 20 21 22 23 24 25 26 27 28 0 30 31 32 33 34 35 36 37 38 39 40 41 42 0 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  0 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 28
+
+Socket 1 global buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+currentPosition(42), lastWritten(41), lastRead(97), transferSize(341)
+
+lastSent = 69, nextRead = 98
+Writing 28 values to global buffer 1 at index 42, starting with 171
+28 values written to global buffer 1
+
+Socket 1 global buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+currentPosition(70), lastWritten(69), lastRead(97), transferSize(313)
+
+Writing 28 values(from 99) at socket 1 send buffer index 98
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 98
+The end of the window is at 125
+It is safe to write 28 more values
+write() returning 28
+
+Socket 1 send buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 0 0 
+lastWritten(125), lastSent(69), lastAck(69)
+
+28 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(125), lastSent(69), lastAck(69)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 43
+			71 72 73 74 75 76 77 78 79 80 81 82 83 84 
+
+	 lastWritten(125), lastSent(83), lastAck(69)
+	 42 bytes left in buffer
+
+0:12:25.400253549 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 43, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 69
+
+Socket 2 receive buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+lastRcvd(82), lastRead(69), nextExpected(44)
+Sending ACK to 2:2 for sequence 43
+
+0:12:25.429458721 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 6, ack: 43, flags: 2, ad_win: 128
+0:12:25.429458721 DEBUG (2): ACK received from 1:128 for sequence number 43
+!!!!!!	!!!!!Okay to send at index 84
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 14 values to read
+Next read is at 70
+ReadSize is 14
+Read 14 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 17 18 19 20 21 22 23 24 25 26 27 28 0 30 31 32 33 34 35 36 37 38 39 40 41 42 0 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 0 72 73 74 75 76 77 78 79 80 81 82 83 84 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  72  73  74  75  76  77  78  79  80  81  82  83  84  0 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 14
+
+Socket 1 global buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+currentPosition(70), lastWritten(69), lastRead(125), transferSize(313)
+
+lastSent = 83, nextRead = 126
+Writing 14 values to global buffer 1 at index 70, starting with 199
+14 values written to global buffer 1
+
+Socket 1 global buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+currentPosition(84), lastWritten(83), lastRead(125), transferSize(299)
+
+Writing 14 values(from 127) at socket 1 send buffer index 126
+Client wants to write 14 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 126
+The end of the window is at 11
+It is safe to write 14 more values
+write() returning 2
+
+Client wants to write 12 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 0
+The end of the window is at 11
+It is safe to write 12 more values
+write() returning 12
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+lastWritten(11), lastSent(83), lastAck(83)
+
+14 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(11), lastSent(83), lastAck(83)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 44
+			85 86 87 88 89 90 91 92 93 94 95 96 97 98 
+
+	 lastWritten(11), lastSent(97), lastAck(83)
+	 42 bytes left in buffer
+
+0:13:29.271179447 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 44, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 83
+
+Socket 2 receive buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+lastRcvd(96), lastRead(83), nextExpected(45)
+Sending ACK to 2:2 for sequence 44
+
+0:13:29.280197274 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 7, ack: 44, flags: 2, ad_win: 128
+0:13:29.280197274 DEBUG (2): ACK received from 1:128 for sequence number 44
+!!!!!!	!!!!!Okay to send at index 98
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(11), lastSent(97), lastAck(97)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 45
+			99 100 101 102 103 104 105 106 107 108 109 110 111 112 
+
+	 lastWritten(11), lastSent(111), lastAck(97)
+	 28 bytes left in buffer
+
+0:14:33.481491323 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 45, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 97
+
+Socket 2 receive buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+lastRcvd(110), lastRead(83), nextExpected(46)
+Sending ACK to 2:2 for sequence 45
+
+0:14:33.629547251 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 8, ack: 45, flags: 2, ad_win: 128
+0:14:33.629547251 DEBUG (2): ACK received from 1:128 for sequence number 45
+!!!!!!	!!!!!Okay to send at index 112
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 28 values to read
+Next read is at 84
+ReadSize is 28
+Read 28 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 17 18 19 20 21 22 23 24 25 26 27 28 0 30 31 32 33 34 35 36 37 38 39 40 41 42 0 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 0 72 73 74 75 76 77 78 79 80 81 82 83 84 0 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  86  87  88  89  90  91  92  93  94  95  96  97  98  99  100  101  102  103  104  105  106  107  108  109  110  111  112  0 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 28
+
+Socket 1 global buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+currentPosition(84), lastWritten(83), lastRead(11), transferSize(299)
+
+lastSent = 111, nextRead = 12
+Writing 28 values to global buffer 1 at index 84, starting with 213
+28 values written to global buffer 1
+
+Socket 1 global buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+currentPosition(112), lastWritten(111), lastRead(11), transferSize(271)
+
+Writing 28 values(from 141) at socket 1 send buffer index 12
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 12
+The end of the window is at 39
+It is safe to write 28 more values
+write() returning 28
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+lastWritten(39), lastSent(111), lastAck(111)
+
+28 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(39), lastSent(111), lastAck(111)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 46
+			113 114 115 116 117 118 119 120 121 122 123 124 125 126 
+
+	 lastWritten(39), lastSent(125), lastAck(111)
+	 42 bytes left in buffer
+
+0:15:37.288193017 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 46, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 111
+
+Socket 2 receive buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 0 0 0 
+lastRcvd(124), lastRead(111), nextExpected(47)
+Sending ACK to 2:2 for sequence 46
+
+0:15:37.488800153 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 9, ack: 46, flags: 2, ad_win: 128
+0:15:37.488800153 DEBUG (2): ACK received from 1:128 for sequence number 46
+!!!!!!	!!!!!Okay to send at index 126
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 14 values to read
+Next read is at 112
+ReadSize is 14
+Read 14 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 17 18 19 20 21 22 23 24 25 26 27 28 0 30 31 32 33 34 35 36 37 38 39 40 41 42 0 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 0 72 73 74 75 76 77 78 79 80 81 82 83 84 0 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 0 114 115 116 117 118 119 120 121 122 123 124 125 126 0 0 0 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  114  115  116  117  118  119  120  121  122  123  124  125  126  0 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 14
+
+Socket 1 global buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+currentPosition(112), lastWritten(111), lastRead(39), transferSize(271)
+
+lastSent = 125, nextRead = 40
+Writing 14 values to global buffer 1 at index 112, starting with 241
+14 values written to global buffer 1
+
+Socket 1 global buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 127 128 
+currentPosition(126), lastWritten(125), lastRead(39), transferSize(257)
+
+Writing 14 values(from 169) at socket 1 send buffer index 40
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 40
+The end of the window is at 53
+It is safe to write 14 more values
+write() returning 14
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+lastWritten(53), lastSent(125), lastAck(125)
+
+14 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(53), lastSent(125), lastAck(125)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 47
+			127 128 129 130 131 132 133 134 135 136 137 138 139 140 
+
+	 lastWritten(53), lastSent(11), lastAck(125)
+	 42 bytes left in buffer
+
+0:16:41.508011115 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 47, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 125
+
+Socket 2 receive buffer:
+130 131 132 133 134 135 136 137 138 139 140 12 13 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 
+lastRcvd(10), lastRead(125), nextExpected(48)
+Sending ACK to 2:2 for sequence 47
+
+0:16:41.764358641 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 10, ack: 47, flags: 2, ad_win: 128
+0:16:41.764358641 DEBUG (2): ACK received from 1:128 for sequence number 47
+!!!!!!	!!!!!Okay to send at index 12
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(53), lastSent(11), lastAck(11)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 48
+			141 142 143 144 145 146 147 148 149 150 151 152 153 154 
+
+	 lastWritten(53), lastSent(25), lastAck(11)
+	 28 bytes left in buffer
+
+0:17:45.465301769 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 48, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 11
+
+Socket 2 receive buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 
+lastRcvd(24), lastRead(125), nextExpected(49)
+Sending ACK to 2:2 for sequence 48
+
+0:17:45.692306609 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 11, ack: 48, flags: 2, ad_win: 128
+0:17:45.692306609 DEBUG (2): ACK received from 1:128 for sequence number 48
+!!!!!!	!!!!!Okay to send at index 26
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Warning!! Socket is about to wrap! There are 28 values. 2 before the wrap and 26 after
+Socket 2 has 28 values to read
+Next read is at 126
+ReadSize is 2
+Read 2 into socket 2 global buffer
+Socket 2 has 26 values to read
+Next read is at 0
+ReadSize is 26
+Read 26 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 27 28 0 30 31 32 33 34 35 36 37 38 39 40 41 42 0 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 0 72 73 74 75 76 77 78 79 80 81 82 83 84 0 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 0 114 115 116 117 118 119 120 121 122 123 124 125 126 0 128 129 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  128  129  130  131  132  133  134  135  136  137  138  139  140  141  142  143  144  145  146  147  148  149  150  151  152  153  154  27 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 28
+
+Socket 1 global buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 127 128 
+currentPosition(126), lastWritten(125), lastRead(53), transferSize(257)
+
+lastSent = 25, nextRead = 54
+Writing 28 values to global buffer 1 at index 126, starting with 255
+28 values written to global buffer 1
+
+Socket 1 global buffer:
+257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 
+currentPosition(26), lastWritten(25), lastRead(53), transferSize(229)
+
+Writing 28 values(from 183) at socket 1 send buffer index 54
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 54
+The end of the window is at 81
+It is safe to write 28 more values
+write() returning 28
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+lastWritten(81), lastSent(25), lastAck(25)
+
+28 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(81), lastSent(25), lastAck(25)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 49
+			155 156 157 158 159 160 161 162 163 164 165 166 167 168 
+
+	 lastWritten(81), lastSent(39), lastAck(25)
+	 42 bytes left in buffer
+
+0:18:49.411010995 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 49, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 25
+
+Socket 2 receive buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 
+lastRcvd(38), lastRead(25), nextExpected(50)
+Sending ACK to 2:2 for sequence 49
+
+0:18:49.619918932 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 12, ack: 49, flags: 2, ad_win: 128
+0:18:49.619918932 DEBUG (2): ACK received from 1:128 for sequence number 49
+!!!!!!	!!!!!Okay to send at index 40
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(81), lastSent(39), lastAck(39)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 50
+			169 170 171 172 173 174 175 176 177 178 179 180 181 182 
+
+	 lastWritten(81), lastSent(53), lastAck(39)
+	 28 bytes left in buffer
+
+0:19:53.271316758 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 50, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 39
+
+Socket 2 receive buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 
+lastRcvd(52), lastRead(25), nextExpected(51)
+Sending ACK to 2:2 for sequence 50
+
+0:19:53.552917570 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 13, ack: 50, flags: 2, ad_win: 128
+0:19:53.552917570 DEBUG (2): ACK received from 1:128 for sequence number 50
+!!!!!!	!!!!!Okay to send at index 54
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 28 values to read
+Next read is at 26
+ReadSize is 28
+Read 28 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 27 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 0 72 73 74 75 76 77 78 79 80 81 82 83 84 0 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 0 114 115 116 117 118 119 120 121 122 123 124 125 126 0 128 129 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  156  157  158  159  160  161  162  163  164  165  166  167  168  169  170  171  172  173  174  175  176  177  178  179  180  181  182  55 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 28
+
+Socket 1 global buffer:
+257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 
+currentPosition(26), lastWritten(25), lastRead(81), transferSize(229)
+
+lastSent = 53, nextRead = 82
+Writing 28 values to global buffer 1 at index 26, starting with 283
+28 values written to global buffer 1
+
+Socket 1 global buffer:
+257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 
+currentPosition(54), lastWritten(53), lastRead(81), transferSize(201)
+
+Writing 28 values(from 211) at socket 1 send buffer index 82
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 82
+The end of the window is at 109
+It is safe to write 28 more values
+write() returning 28
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+lastWritten(109), lastSent(53), lastAck(53)
+
+28 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(109), lastSent(53), lastAck(53)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 51
+			183 184 185 186 187 188 189 190 191 192 193 194 195 196 
+
+	 lastWritten(109), lastSent(67), lastAck(53)
+	 42 bytes left in buffer
+
+0:20:57.499176299 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 51, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 53
+
+Socket 2 receive buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 
+lastRcvd(66), lastRead(53), nextExpected(52)
+Sending ACK to 2:2 for sequence 51
+
+0:20:57.783950937 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 14, ack: 51, flags: 2, ad_win: 128
+0:20:57.783950937 DEBUG (2): ACK received from 1:128 for sequence number 51
+!!!!!!	!!!!!Okay to send at index 68
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 14 values to read
+Next read is at 54
+ReadSize is 14
+Read 14 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 27 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 55 184 185 186 187 188 189 190 191 192 193 194 195 196 69 70 0 72 73 74 75 76 77 78 79 80 81 82 83 84 0 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 0 114 115 116 117 118 119 120 121 122 123 124 125 126 0 128 129 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  184  185  186  187  188  189  190  191  192  193  194  195  196  69 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 14
+
+Socket 1 global buffer:
+257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 
+currentPosition(54), lastWritten(53), lastRead(109), transferSize(201)
+
+lastSent = 67, nextRead = 110
+Writing 14 values to global buffer 1 at index 54, starting with 311
+14 values written to global buffer 1
+
+Socket 1 global buffer:
+257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 
+currentPosition(68), lastWritten(67), lastRead(109), transferSize(187)
+
+Writing 14 values(from 239) at socket 1 send buffer index 110
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 110
+The end of the window is at 123
+It is safe to write 14 more values
+write() returning 14
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 125 126 127 128 
+lastWritten(123), lastSent(67), lastAck(67)
+
+14 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(123), lastSent(67), lastAck(67)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 52
+			197 198 199 200 201 202 203 204 205 206 207 208 209 210 
+
+	 lastWritten(123), lastSent(81), lastAck(67)
+	 42 bytes left in buffer
+
+0:22:1.394104224 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 52, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 67
+
+Socket 2 receive buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 
+lastRcvd(80), lastRead(67), nextExpected(53)
+Sending ACK to 2:2 for sequence 52
+
+0:22:1.677475084 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 15, ack: 52, flags: 2, ad_win: 128
+0:22:1.677475084 DEBUG (2): ACK received from 1:128 for sequence number 52
+!!!!!!	!!!!!Okay to send at index 82
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(123), lastSent(81), lastAck(81)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 53
+			211 212 213 214 215 216 217 218 219 220 221 222 223 224 
+
+	 lastWritten(123), lastSent(95), lastAck(81)
+	 28 bytes left in buffer
+
+0:23:5.492767565 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 53, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 81
+
+Socket 2 receive buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 
+lastRcvd(94), lastRead(67), nextExpected(54)
+Sending ACK to 2:2 for sequence 53
+
+0:23:5.650451778 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 16, ack: 53, flags: 2, ad_win: 128
+0:23:5.650451778 DEBUG (2): ACK received from 1:128 for sequence number 53
+!!!!!!	!!!!!Okay to send at index 96
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 28 values to read
+Next read is at 68
+ReadSize is 28
+Read 28 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 27 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 55 184 185 186 187 188 189 190 191 192 193 194 195 196 69 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 0 114 115 116 117 118 119 120 121 122 123 124 125 126 0 128 129 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  198  199  200  201  202  203  204  205  206  207  208  209  210  211  212  213  214  215  216  217  218  219  220  221  222  223  224  97 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 28
+
+Socket 1 global buffer:
+257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 
+currentPosition(68), lastWritten(67), lastRead(123), transferSize(187)
+
+lastSent = 95, nextRead = 124
+Writing 28 values to global buffer 1 at index 68, starting with 325
+28 values written to global buffer 1
+
+Socket 1 global buffer:
+257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 
+currentPosition(96), lastWritten(95), lastRead(123), transferSize(159)
+
+Writing 28 values(from 253) at socket 1 send buffer index 124
+Client wants to write 28 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 124
+The end of the window is at 23
+It is safe to write 28 more values
+write() returning 4
+
+Client wants to write 24 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 0
+The end of the window is at 23
+It is safe to write 24 more values
+write() returning 24
+
+Socket 1 send buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 
+lastWritten(23), lastSent(95), lastAck(95)
+
+28 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(23), lastSent(95), lastAck(95)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 54
+			225 226 227 228 229 230 231 232 233 234 235 236 237 238 
+
+	 lastWritten(23), lastSent(109), lastAck(95)
+	 42 bytes left in buffer
+
+0:24:9.367706519 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 54, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 95
+
+Socket 2 receive buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 
+lastRcvd(108), lastRead(95), nextExpected(55)
+Sending ACK to 2:2 for sequence 54
+
+0:24:9.575409064 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 17, ack: 54, flags: 2, ad_win: 128
+0:24:9.575409064 DEBUG (2): ACK received from 1:128 for sequence number 54
+!!!!!!	!!!!!Okay to send at index 110
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 14 values to read
+Next read is at 96
+ReadSize is 14
+Read 14 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 27 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 55 184 185 186 187 188 189 190 191 192 193 194 195 196 69 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 97 226 227 228 229 230 231 232 233 234 235 236 237 238 111 112 0 114 115 116 117 118 119 120 121 122 123 124 125 126 0 128 129 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  226  227  228  229  230  231  232  233  234  235  236  237  238  111 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 14
+
+Socket 1 global buffer:
+257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 
+currentPosition(96), lastWritten(95), lastRead(23), transferSize(159)
+
+lastSent = 109, nextRead = 24
+Writing 14 values to global buffer 1 at index 96, starting with 353
+14 values written to global buffer 1
+
+Socket 1 global buffer:
+257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 
+currentPosition(110), lastWritten(109), lastRead(23), transferSize(145)
+
+Writing 14 values(from 281) at socket 1 send buffer index 24
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 24
+The end of the window is at 37
+It is safe to write 14 more values
+write() returning 14
+
+Socket 1 send buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 
+lastWritten(37), lastSent(109), lastAck(109)
+
+14 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(37), lastSent(109), lastAck(109)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 55
+			239 240 241 242 243 244 245 246 247 248 249 250 251 252 
+
+	 lastWritten(37), lastSent(123), lastAck(109)
+	 42 bytes left in buffer
+
+0:25:13.399658454 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 55, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 109
+
+Socket 2 receive buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 125 126 127 128 129 
+lastRcvd(122), lastRead(109), nextExpected(56)
+Sending ACK to 2:2 for sequence 55
+
+0:25:13.496673699 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 18, ack: 55, flags: 2, ad_win: 128
+0:25:13.496673699 DEBUG (2): ACK received from 1:128 for sequence number 55
+!!!!!!	!!!!!Okay to send at index 124
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(37), lastSent(123), lastAck(123)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 56
+			253 254 255 0 1 2 3 4 5 6 7 8 9 10 
+
+	 lastWritten(37), lastSent(9), lastAck(123)
+	 28 bytes left in buffer
+
+0:26:17.458191152 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 56, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 123
+
+Socket 2 receive buffer:
+2 3 4 5 6 7 8 9 10 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 1 
+lastRcvd(8), lastRead(109), nextExpected(57)
+Sending ACK to 2:2 for sequence 56
+
+0:26:17.606308109 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 19, ack: 56, flags: 2, ad_win: 128
+0:26:17.606308109 DEBUG (2): ACK received from 1:128 for sequence number 56
+!!!!!!	!!!!!Okay to send at index 10
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Warning!! Socket is about to wrap! There are 28 values. 18 before the wrap and 10 after
+Socket 2 has 28 values to read
+Next read is at 110
+ReadSize is 18
+Read 18 into socket 2 global buffer
+Socket 2 has 10 values to read
+Next read is at 0
+ReadSize is 10
+Read 10 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+2 3 4 5 6 7 8 9 10 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 27 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 55 184 185 186 187 188 189 190 191 192 193 194 195 196 69 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 97 226 227 228 229 230 231 232 233 234 235 236 237 238 111 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 1 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  240  241  242  243  244  245  246  247  248  249  250  251  252  253  254  255  0  1  2  3  4  5  6  7  8  9  10  139 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 28
+
+Socket 1 global buffer:
+257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 
+currentPosition(110), lastWritten(109), lastRead(37), transferSize(145)
+
+lastSent = 9, nextRead = 38
+Writing 28 values to global buffer 1 at index 110, starting with 367
+28 values written to global buffer 1
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 
+currentPosition(10), lastWritten(9), lastRead(37), transferSize(117)
+
+Writing 28 values(from 295) at socket 1 send buffer index 38
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 38
+The end of the window is at 65
+It is safe to write 28 more values
+write() returning 28
+
+Socket 1 send buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 
+lastWritten(65), lastSent(9), lastAck(9)
+
+28 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(65), lastSent(9), lastAck(9)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 57
+			11 12 13 14 15 16 17 18 19 20 21 22 23 24 
+
+	 lastWritten(65), lastSent(23), lastAck(9)
+	 42 bytes left in buffer
+
+0:27:21.251404081 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 57, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 9
+
+Socket 2 receive buffer:
+2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 1 
+lastRcvd(22), lastRead(9), nextExpected(58)
+Sending ACK to 2:2 for sequence 57
+
+0:27:21.404800514 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 20, ack: 57, flags: 2, ad_win: 128
+0:27:21.404800514 DEBUG (2): ACK received from 1:128 for sequence number 57
+!!!!!!	!!!!!Okay to send at index 24
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 14 values to read
+Next read is at 10
+ReadSize is 14
+Read 14 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+2 3 4 5 6 7 8 9 10 139 12 13 14 15 16 17 18 19 20 21 22 23 24 153 154 27 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 55 184 185 186 187 188 189 190 191 192 193 194 195 196 69 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 97 226 227 228 229 230 231 232 233 234 235 236 237 238 111 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 1 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  12  13  14  15  16  17  18  19  20  21  22  23  24  153 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 14
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 
+currentPosition(10), lastWritten(9), lastRead(65), transferSize(117)
+
+lastSent = 23, nextRead = 66
+Writing 14 values to global buffer 1 at index 10, starting with 395
+14 values written to global buffer 1
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 
+currentPosition(24), lastWritten(23), lastRead(65), transferSize(103)
+
+Writing 14 values(from 323) at socket 1 send buffer index 66
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 66
+The end of the window is at 79
+It is safe to write 14 more values
+write() returning 14
+
+Socket 1 send buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 
+lastWritten(79), lastSent(23), lastAck(23)
+
+14 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(79), lastSent(23), lastAck(23)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 58
+			25 26 27 28 29 30 31 32 33 34 35 36 37 38 
+
+	 lastWritten(79), lastSent(37), lastAck(23)
+	 42 bytes left in buffer
+
+0:28:25.376205695 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 58, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 23
+
+Socket 2 receive buffer:
+2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 1 
+lastRcvd(36), lastRead(23), nextExpected(59)
+Sending ACK to 2:2 for sequence 58
+
+0:28:25.485611090 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 21, ack: 58, flags: 2, ad_win: 128
+0:28:25.485611090 DEBUG (2): ACK received from 1:128 for sequence number 58
+!!!!!!	!!!!!Okay to send at index 38
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(79), lastSent(37), lastAck(37)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 59
+			39 40 41 42 43 44 45 46 47 48 49 50 51 52 
+
+	 lastWritten(79), lastSent(51), lastAck(37)
+	 28 bytes left in buffer
+
+0:29:29.287521629 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 59, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 37
+
+Socket 2 receive buffer:
+2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 1 
+lastRcvd(50), lastRead(23), nextExpected(60)
+Sending ACK to 2:2 for sequence 59
+
+0:29:29.579284803 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 22, ack: 59, flags: 2, ad_win: 128
+0:29:29.579284803 DEBUG (2): ACK received from 1:128 for sequence number 59
+!!!!!!	!!!!!Okay to send at index 52
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 28 values to read
+Next read is at 24
+ReadSize is 28
+Read 28 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+2 3 4 5 6 7 8 9 10 139 12 13 14 15 16 17 18 19 20 21 22 23 24 153 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 181 182 55 184 185 186 187 188 189 190 191 192 193 194 195 196 69 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 97 226 227 228 229 230 231 232 233 234 235 236 237 238 111 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 1 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  181 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 28
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 
+currentPosition(24), lastWritten(23), lastRead(79), transferSize(103)
+
+lastSent = 51, nextRead = 80
+Writing 28 values to global buffer 1 at index 24, starting with 409
+28 values written to global buffer 1
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 
+currentPosition(52), lastWritten(51), lastRead(79), transferSize(75)
+
+Writing 28 values(from 337) at socket 1 send buffer index 80
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 80
+The end of the window is at 107
+It is safe to write 28 more values
+write() returning 28
+
+Socket 1 send buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 
+lastWritten(107), lastSent(51), lastAck(51)
+
+28 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(107), lastSent(51), lastAck(51)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 60
+			53 54 55 56 57 58 59 60 61 62 63 64 65 66 
+
+	 lastWritten(107), lastSent(65), lastAck(51)
+	 42 bytes left in buffer
+
+0:30:33.283737431 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 60, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 51
+
+Socket 2 receive buffer:
+2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 1 
+lastRcvd(64), lastRead(51), nextExpected(61)
+Sending ACK to 2:2 for sequence 60
+
+0:30:33.375030608 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 23, ack: 60, flags: 2, ad_win: 128
+0:30:33.375030608 DEBUG (2): ACK received from 1:128 for sequence number 60
+!!!!!!	!!!!!Okay to send at index 66
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 14 values to read
+Next read is at 52
+ReadSize is 14
+Read 14 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+2 3 4 5 6 7 8 9 10 139 12 13 14 15 16 17 18 19 20 21 22 23 24 153 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 181 54 55 56 57 58 59 60 61 62 63 64 65 66 195 196 69 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 97 226 227 228 229 230 231 232 233 234 235 236 237 238 111 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 1 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  54  55  56  57  58  59  60  61  62  63  64  65  66  195 
+############################################################################################
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(107), lastSent(65), lastAck(65)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 61
+			67 68 69 70 71 72 73 74 75 76 77 78 79 80 
+
+	 lastWritten(107), lastSent(79), lastAck(65)
+	 28 bytes left in buffer
+
+===============(2) Client Write Timer fired================
+numToWrite = 28
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 
+currentPosition(52), lastWritten(51), lastRead(107), transferSize(75)
+
+lastSent = 79, nextRead = 108
+Writing 28 values to global buffer 1 at index 52, starting with 437
+28 values written to global buffer 1
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 
+currentPosition(80), lastWritten(79), lastRead(107), transferSize(47)
+
+Writing 28 values(from 365) at socket 1 send buffer index 108
+Client wants to write 28 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 108
+The end of the window is at 121
+It is safe to write 14 more values
+write() returning 14
+
+Client wants to write 14 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 122
+The end of the window is at 121
+Cannot write past end of window, returning 0
+
+Socket 1 send buffer:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 251 252 253 254 255 0 
+lastWritten(121), lastSent(79), lastAck(65)
+
+14 values written to socket 1 send buffer
+
+0:31:37.349304442 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 61, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 65
+
+Socket 2 receive buffer:
+2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 1 
+lastRcvd(78), lastRead(65), nextExpected(62)
+Sending ACK to 2:2 for sequence 61
+
+0:31:37.473495620 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 24, ack: 61, flags: 2, ad_win: 128
+0:31:37.473495620 DEBUG (2): ACK received from 1:128 for sequence number 61
+!!!!!!	!!!!!Okay to send at index 80
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(121), lastSent(79), lastAck(79)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 62
+			81 82 83 84 85 86 87 88 89 90 91 92 93 94 
+
+	 lastWritten(121), lastSent(93), lastAck(79)
+	 28 bytes left in buffer
+
+0:32:41.412521629 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 62, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 79
+
+Socket 2 receive buffer:
+2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 1 
+lastRcvd(92), lastRead(65), nextExpected(63)
+Sending ACK to 2:2 for sequence 62
+
+0:32:41.614059585 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 25, ack: 62, flags: 2, ad_win: 128
+0:32:41.614059585 DEBUG (2): ACK received from 1:128 for sequence number 62
+!!!!!!	!!!!!Okay to send at index 94
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 28 values to read
+Next read is at 66
+ReadSize is 28
+Read 28 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+2 3 4 5 6 7 8 9 10 139 12 13 14 15 16 17 18 19 20 21 22 23 24 153 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 181 54 55 56 57 58 59 60 61 62 63 64 65 66 195 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 223 224 97 226 227 228 229 230 231 232 233 234 235 236 237 238 111 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 1 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  223 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 14
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 337 338 339 340 341 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 
+currentPosition(80), lastWritten(79), lastRead(121), transferSize(47)
+
+lastSent = 93, nextRead = 122
+Writing 14 values to global buffer 1 at index 80, starting with 465
+14 values written to global buffer 1
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 
+currentPosition(94), lastWritten(93), lastRead(121), transferSize(33)
+
+Writing 14 values(from 379) at socket 1 send buffer index 122
+Client wants to write 14 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 122
+The end of the window is at 21
+It is safe to write 28 more values
+write() returning 6
+
+Client wants to write 8 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 0
+The end of the window is at 21
+It is safe to write 22 more values
+write() returning 22
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+lastWritten(21), lastSent(93), lastAck(93)
+
+28 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(21), lastSent(93), lastAck(93)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 63
+			95 96 97 98 99 100 101 102 103 104 105 106 107 108 
+
+	 lastWritten(21), lastSent(107), lastAck(93)
+	 42 bytes left in buffer
+
+0:33:45.493759387 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 63, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 93
+
+Socket 2 receive buffer:
+2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 0 1 
+lastRcvd(106), lastRead(93), nextExpected(64)
+Sending ACK to 2:2 for sequence 63
+
+0:33:45.557510478 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 26, ack: 63, flags: 2, ad_win: 128
+0:33:45.557510478 DEBUG (2): ACK received from 1:128 for sequence number 63
+!!!!!!	!!!!!Okay to send at index 108
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(21), lastSent(107), lastAck(107)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 64
+			109 110 111 112 113 114 115 116 117 118 119 120 121 122 
+
+	 lastWritten(21), lastSent(121), lastAck(107)
+	 28 bytes left in buffer
+
+0:34:49.348800904 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 64, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 107
+
+Socket 2 receive buffer:
+2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 251 252 253 254 255 0 1 
+lastRcvd(120), lastRead(93), nextExpected(65)
+Sending ACK to 2:2 for sequence 64
+
+0:34:49.398300273 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 27, ack: 64, flags: 2, ad_win: 128
+0:34:49.398300273 DEBUG (2): ACK received from 1:128 for sequence number 64
+!!!!!!	!!!!!Okay to send at index 122
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 28 values to read
+Next read is at 94
+ReadSize is 28
+Read 28 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+2 3 4 5 6 7 8 9 10 139 12 13 14 15 16 17 18 19 20 21 22 23 24 153 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 181 54 55 56 57 58 59 60 61 62 63 64 65 66 195 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 223 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 251 252 253 254 255 0 1 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  96  97  98  99  100  101  102  103  104  105  106  107  108  109  110  111  112  113  114  115  116  117  118  119  120  121  122  251 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 28
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 351 352 353 354 355 356 357 358 359 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377 378 379 380 381 382 383 384 
+currentPosition(94), lastWritten(93), lastRead(21), transferSize(33)
+
+lastSent = 121, nextRead = 22
+Writing 28 values to global buffer 1 at index 94, starting with 479
+28 values written to global buffer 1
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 379 380 381 382 383 384 
+currentPosition(122), lastWritten(121), lastRead(21), transferSize(5)
+
+Writing 28 values(from 407) at socket 1 send buffer index 22
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 22
+The end of the window is at 49
+It is safe to write 28 more values
+write() returning 28
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+lastWritten(49), lastSent(121), lastAck(121)
+
+28 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(49), lastSent(121), lastAck(121)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 65
+			123 124 125 126 127 128 129 130 131 132 133 134 135 136 
+
+	 lastWritten(49), lastSent(7), lastAck(121)
+	 42 bytes left in buffer
+
+0:35:53.391052490 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 65, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 121
+
+Socket 2 receive buffer:
+130 131 132 133 134 135 136 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 
+lastRcvd(6), lastRead(121), nextExpected(66)
+Sending ACK to 2:2 for sequence 65
+
+0:35:53.501190280 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 28, ack: 65, flags: 2, ad_win: 128
+0:35:53.501190280 DEBUG (2): ACK received from 1:128 for sequence number 65
+!!!!!!	!!!!!Okay to send at index 8
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Warning!! Socket is about to wrap! There are 14 values. 6 before the wrap and 8 after
+Socket 2 has 14 values to read
+Next read is at 122
+ReadSize is 6
+Read 6 into socket 2 global buffer
+Socket 2 has 8 values to read
+Next read is at 0
+ReadSize is 8
+Read 8 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+130 131 132 133 134 135 136 9 10 139 12 13 14 15 16 17 18 19 20 21 22 23 24 153 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 181 54 55 56 57 58 59 60 61 62 63 64 65 66 195 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 223 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 251 124 125 126 127 128 129 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  124  125  126  127  128  129  130  131  132  133  134  135  136  9 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 14
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 379 380 381 382 383 384 
+currentPosition(122), lastWritten(121), lastRead(49), transferSize(5)
+
+lastSent = 7, nextRead = 50
+Writing 5 values to global buffer 1 at index 122, starting with 507
+5 values written to global buffer 1
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(49), transferSize(0)
+
+Writing 5 values(from 435) at socket 1 send buffer index 50
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 50
+The end of the window is at 63
+It is safe to write 14 more values
+write() returning 14
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+lastWritten(63), lastSent(7), lastAck(7)
+
+14 values written to socket 1 send buffer
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(63), lastSent(7), lastAck(7)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 66
+			137 138 139 140 141 142 143 144 145 146 147 148 149 150 
+
+	 lastWritten(63), lastSent(21), lastAck(7)
+	 42 bytes left in buffer
+
+0:36:57.259933745 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 66, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 7
+
+Socket 2 receive buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 
+lastRcvd(20), lastRead(7), nextExpected(67)
+Sending ACK to 2:2 for sequence 66
+
+0:36:57.497284059 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 29, ack: 66, flags: 2, ad_win: 128
+0:36:57.497284059 DEBUG (2): ACK received from 1:128 for sequence number 66
+!!!!!!	!!!!!Okay to send at index 22
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(63), lastSent(21), lastAck(21)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 67
+			151 152 153 154 155 156 157 158 159 160 161 162 163 164 
+
+	 lastWritten(63), lastSent(35), lastAck(21)
+	 28 bytes left in buffer
+
+0:38:1.350235222 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 67, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 21
+
+Socket 2 receive buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 
+lastRcvd(34), lastRead(7), nextExpected(68)
+Sending ACK to 2:2 for sequence 67
+
+0:38:1.474807828 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 30, ack: 67, flags: 2, ad_win: 128
+0:38:1.474807828 DEBUG (2): ACK received from 1:128 for sequence number 67
+!!!!!!	!!!!!Okay to send at index 36
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 28 values to read
+Next read is at 8
+ReadSize is 28
+Read 28 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+130 131 132 133 134 135 136 9 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 181 54 55 56 57 58 59 60 61 62 63 64 65 66 195 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 223 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 251 124 125 126 127 128 129 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  138  139  140  141  142  143  144  145  146  147  148  149  150  151  152  153  154  155  156  157  158  159  160  161  162  163  164  37 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 37
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(63), transferSize(0)
+
+lastSent = 35, nextRead = 64
+Writing 0 values to global buffer 1 at index 127, starting with 512
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(63), transferSize(0)
+
+Writing 0 values(from 449) at socket 1 send buffer index 64
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 64
+The end of the window is at 91
+It is safe to write 28 more values
+write() returning 28
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+lastWritten(91), lastSent(35), lastAck(35)
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(91), lastSent(35), lastAck(35)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 68
+			165 166 167 168 169 170 171 172 173 174 175 176 177 178 
+
+	 lastWritten(91), lastSent(49), lastAck(35)
+	 42 bytes left in buffer
+
+0:39:5.434875761 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 68, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 35
+
+Socket 2 receive buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 
+lastRcvd(48), lastRead(35), nextExpected(69)
+Sending ACK to 2:2 for sequence 68
+
+0:39:5.632934677 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 31, ack: 68, flags: 2, ad_win: 128
+0:39:5.632934677 DEBUG (2): ACK received from 1:128 for sequence number 68
+!!!!!!	!!!!!Okay to send at index 50
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 14 values to read
+Next read is at 36
+ReadSize is 14
+Read 14 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+130 131 132 133 134 135 136 9 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 37 166 167 168 169 170 171 172 173 174 175 176 177 178 51 52 181 54 55 56 57 58 59 60 61 62 63 64 65 66 195 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 223 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 251 124 125 126 127 128 129 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  166  167  168  169  170  171  172  173  174  175  176  177  178  51 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 51
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(91), transferSize(0)
+
+lastSent = 49, nextRead = 92
+Writing 0 values to global buffer 1 at index 127, starting with 512
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(91), transferSize(0)
+
+Writing 0 values(from 477) at socket 1 send buffer index 92
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 92
+The end of the window is at 105
+It is safe to write 14 more values
+write() returning 14
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 
+lastWritten(105), lastSent(49), lastAck(49)
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(105), lastSent(49), lastAck(49)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 69
+			179 180 181 182 183 184 185 186 187 188 189 190 191 192 
+
+	 lastWritten(105), lastSent(63), lastAck(49)
+	 42 bytes left in buffer
+
+0:40:9.359421039 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 69, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Writing 14 values to socket 2 receive buffer at 49
+
+Socket 2 receive buffer:
+130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 
+lastRcvd(62), lastRead(49), nextExpected(70)
+Sending ACK to 2:2 for sequence 69
+
+0:40:9.460891820 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 32, ack: 69, flags: 2, ad_win: 128
+0:40:9.460891820 DEBUG (2): ACK received from 1:128 for sequence number 69
+!!!!!!	!!!!!Okay to send at index 64
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(105), lastSent(63), lastAck(63)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 70
+			193 194 195 196 197 198 199 200 201 202 203 204 205 206 
+
+	 lastWritten(105), lastSent(77), lastAck(63)
+	 28 bytes left in buffer
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Socket 2 has 14 values to read
+Next read is at 50
+ReadSize is 14
+Read 14 into socket 2 global buffer
+	Socket 2:
+Socket 2 global buffer:
+130 131 132 133 134 135 136 9 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 37 166 167 168 169 170 171 172 173 174 175 176 177 178 51 180 181 182 183 184 185 186 187 188 189 190 191 192 65 66 195 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 223 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 251 124 125 126 127 128 129 
+currentPosition(0), lastWritten(0), lastRead(0), transferSize(0)
+############################################################################################
+(1:128) Reading Data:  180  181  182  183  184  185  186  187  188  189  190  191  192  65 
+############################################################################################
+
+===============(2) Client Write Timer fired================
+numToWrite = 79
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(105), transferSize(0)
+
+lastSent = 77, nextRead = 106
+Writing 0 values to global buffer 1 at index 127, starting with 512
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(105), transferSize(0)
+
+Writing 0 values(from 491) at socket 1 send buffer index 106
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 106
+The end of the window is at 119
+It is safe to write 14 more values
+write() returning 14
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 121 122 123 124 125 126 127 128 
+lastWritten(119), lastSent(77), lastAck(63)
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(119), lastSent(77), lastAck(63)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 71
+			207 208 209 210 211 212 213 214 215 216 217 218 219 220 
+
+	 lastWritten(119), lastSent(91), lastAck(63)
+	 28 bytes left in buffer
+
+0:42:17.247329940 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 71, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Expecting sequence number 70, received 71
+Resending ACK to 2:2 for sequence 71
+
+0:42:17.517410392 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 33, ack: 71, flags: 2, ad_win: 128
+0:42:17.517410392 DEBUG (2): ACK received from 1:128 for sequence number 71
+!!!!!!	!!!!!Okay to send at index 92
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Warning!! Socket is about to wrap! There are 128 values. 64 before the wrap and 64 after
+Socket 2 has 0 values to read
+Next read is at 64
+ReadSize is 0
+Socket 2 has 0 values to read
+Next read is at 64
+ReadSize is 0
+	Socket 2:
+===============(2) Client Write Timer fired================
+numToWrite = 93
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(119), transferSize(0)
+
+lastSent = 91, nextRead = 120
+Writing 0 values to global buffer 1 at index 127, starting with 512
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(119), transferSize(0)
+
+Writing 0 values(from 505) at socket 1 send buffer index 120
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 120
+The end of the window is at 19
+It is safe to write 28 more values
+write() returning 8
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 128 
+lastWritten(127), lastSent(91), lastAck(91)
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(127), lastSent(91), lastAck(91)
+	 36 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 72
+			221 222 223 224 225 226 227 228 229 230 231 232 233 234 
+
+	 lastWritten(127), lastSent(105), lastAck(91)
+	 22 bytes left in buffer
+
+0:43:21.335602049 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 72, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Expecting sequence number 70, received 72
+Resending ACK to 2:2 for sequence 72
+
+0:43:21.443359494 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 34, ack: 72, flags: 2, ad_win: 128
+0:43:21.443359494 DEBUG (2): ACK received from 1:128 for sequence number 72
+!!!!!!	!!!!!Okay to send at index 106
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(127), lastSent(105), lastAck(105)
+	 22 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 73
+			235 236 237 238 239 240 241 242 243 244 245 246 247 248 
+
+	 lastWritten(127), lastSent(119), lastAck(105)
+	 8 bytes left in buffer
+
+0:44:25.251068384 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 73, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Expecting sequence number 70, received 73
+Resending ACK to 2:2 for sequence 73
+
+0:44:25.427978627 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 35, ack: 73, flags: 2, ad_win: 128
+0:44:25.427978627 DEBUG (2): ACK received from 1:128 for sequence number 73
+!!!!!!	!!!!!Okay to send at index 120
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Warning!! Socket is about to wrap! There are 128 values. 64 before the wrap and 64 after
+Socket 2 has 0 values to read
+Next read is at 64
+ReadSize is 0
+Socket 2 has 0 values to read
+Next read is at 64
+ReadSize is 0
+	Socket 2:
+===============(2) Client Write Timer fired================
+numToWrite = 121
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(127), transferSize(0)
+
+lastSent = 119, nextRead = 0
+Writing 0 values to global buffer 1 at index 127, starting with 512
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(127), transferSize(0)
+
+Writing 0 values(from 385) at socket 1 send buffer index 0
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 0
+The end of the window is at 47
+It is safe to write 48 more values
+write() returning 48
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 128 
+lastWritten(47), lastSent(119), lastAck(119)
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(47), lastSent(119), lastAck(119)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 74
+			249 250 251 252 253 254 255 128 129 130 131 132 133 134 
+
+	 lastWritten(47), lastSent(5), lastAck(119)
+	 42 bytes left in buffer
+
+0:45:29.412582635 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 74, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Expecting sequence number 70, received 74
+Resending ACK to 2:2 for sequence 74
+
+0:45:29.476257416 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 36, ack: 74, flags: 2, ad_win: 128
+0:45:29.476257416 DEBUG (2): ACK received from 1:128 for sequence number 74
+!!!!!!	!!!!!Okay to send at index 6
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(47), lastSent(5), lastAck(5)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 75
+			135 136 137 138 139 140 141 142 143 144 145 146 147 148 
+
+	 lastWritten(47), lastSent(19), lastAck(5)
+	 28 bytes left in buffer
+
+0:46:33.278396869 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 75, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Expecting sequence number 70, received 75
+Resending ACK to 2:2 for sequence 75
+
+0:46:33.388733040 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 37, ack: 75, flags: 2, ad_win: 128
+0:46:33.388733040 DEBUG (2): ACK received from 1:128 for sequence number 75
+!!!!!!	!!!!!Okay to send at index 20
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Warning!! Socket is about to wrap! There are 128 values. 64 before the wrap and 64 after
+Socket 2 has 0 values to read
+Next read is at 64
+ReadSize is 0
+Socket 2 has 0 values to read
+Next read is at 64
+ReadSize is 0
+	Socket 2:
+===============(2) Client Write Timer fired================
+numToWrite = 21
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(47), transferSize(0)
+
+lastSent = 19, nextRead = 48
+Writing 0 values to global buffer 1 at index 127, starting with 512
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(47), transferSize(0)
+
+Writing 0 values(from 433) at socket 1 send buffer index 48
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 48
+The end of the window is at 75
+It is safe to write 28 more values
+write() returning 28
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 128 
+lastWritten(75), lastSent(19), lastAck(19)
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(75), lastSent(19), lastAck(19)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 76
+			149 150 151 152 153 154 155 156 157 158 159 160 161 162 
+
+	 lastWritten(75), lastSent(33), lastAck(19)
+	 42 bytes left in buffer
+
+0:47:37.461044569 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 76, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Expecting sequence number 70, received 76
+Resending ACK to 2:2 for sequence 76
+
+0:47:37.498687870 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 38, ack: 76, flags: 2, ad_win: 128
+0:47:37.498687870 DEBUG (2): ACK received from 1:128 for sequence number 76
+!!!!!!	!!!!!Okay to send at index 34
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Warning!! Socket is about to wrap! There are 128 values. 64 before the wrap and 64 after
+Socket 2 has 0 values to read
+Next read is at 64
+ReadSize is 0
+Socket 2 has 0 values to read
+Next read is at 64
+ReadSize is 0
+	Socket 2:
+===============(2) Client Write Timer fired================
+numToWrite = 35
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(75), transferSize(0)
+
+lastSent = 33, nextRead = 76
+Writing 0 values to global buffer 1 at index 127, starting with 512
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(75), transferSize(0)
+
+Writing 0 values(from 461) at socket 1 send buffer index 76
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 76
+The end of the window is at 89
+It is safe to write 14 more values
+write() returning 14
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 128 
+lastWritten(89), lastSent(33), lastAck(33)
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(89), lastSent(33), lastAck(33)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 77
+			163 164 165 166 167 168 169 170 171 172 173 174 175 176 
+
+	 lastWritten(89), lastSent(47), lastAck(33)
+	 42 bytes left in buffer
+
+0:48:41.464248924 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 77, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Expecting sequence number 70, received 77
+Resending ACK to 2:2 for sequence 77
+
+0:48:41.533477900 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 39, ack: 77, flags: 2, ad_win: 128
+0:48:41.533477900 DEBUG (2): ACK received from 1:128 for sequence number 77
+!!!!!!	!!!!!Okay to send at index 48
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(89), lastSent(47), lastAck(47)
+	 42 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 78
+			177 178 179 180 181 182 183 184 185 186 187 188 189 190 
+
+	 lastWritten(89), lastSent(61), lastAck(47)
+	 28 bytes left in buffer
+
+0:49:45.282654075 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 78, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Expecting sequence number 70, received 78
+Resending ACK to 2:2 for sequence 78
+
+0:49:45.462677122 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 40, ack: 78, flags: 2, ad_win: 128
+0:49:45.462677122 DEBUG (2): ACK received from 1:128 for sequence number 78
+!!!!!!	!!!!!Okay to send at index 62
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Warning!! Socket is about to wrap! There are 128 values. 64 before the wrap and 64 after
+Socket 2 has 0 values to read
+Next read is at 64
+ReadSize is 0
+Socket 2 has 0 values to read
+Next read is at 64
+ReadSize is 0
+	Socket 2:
+===============(2) Client Write Timer fired================
+numToWrite = 63
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(89), transferSize(0)
+
+lastSent = 61, nextRead = 90
+Writing 0 values to global buffer 1 at index 127, starting with 512
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(89), transferSize(0)
+
+Writing 0 values(from 475) at socket 1 send buffer index 90
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 90
+The end of the window is at 117
+It is safe to write 28 more values
+write() returning 28
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 128 
+lastWritten(117), lastSent(61), lastAck(61)
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(117), lastSent(61), lastAck(61)
+	 56 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 79
+			191 192 193 194 195 196 197 198 199 200 201 202 203 204 
+
+	 lastWritten(117), lastSent(75), lastAck(61)
+	 42 bytes left in buffer
+
+0:50:49.320999388 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 79, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Expecting sequence number 70, received 79
+Resending ACK to 2:2 for sequence 79
+
+0:50:49.519455058 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 41, ack: 79, flags: 2, ad_win: 128
+0:50:49.519455058 DEBUG (2): ACK received from 1:128 for sequence number 79
+!!!!!!	!!!!!Okay to send at index 76
+
+===============(1) Server Accept Timer fired===============
+Checking sockets for connection requests
+Checking sockets for data to read
+Warning!! Socket is about to wrap! There are 128 values. 64 before the wrap and 64 after
+Socket 2 has 0 values to read
+Next read is at 64
+ReadSize is 0
+Socket 2 has 0 values to read
+Next read is at 64
+ReadSize is 0
+	Socket 2:
+===============(2) Client Write Timer fired================
+numToWrite = 77
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(117), transferSize(0)
+
+lastSent = 75, nextRead = 118
+Writing 0 values to global buffer 1 at index 127, starting with 512
+
+Socket 1 global buffer:
+385 386 387 388 389 390 391 392 393 394 395 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503 504 505 506 507 508 509 510 511 384 
+currentPosition(127), lastWritten(126), lastRead(117), transferSize(0)
+
+Writing 0 values(from 503) at socket 1 send buffer index 118
+Client wants to write 128 values to socket 1 send buffer
+Write will wrap around buffer
+The next index to write is at 118
+The end of the window is at 3
+It is safe to write 14 more values
+write() returning 10
+
+Socket 1 send buffer:
+129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 128 
+lastWritten(127), lastSent(75), lastAck(75)
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(127), lastSent(75), lastAck(75)
+	 52 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 80
+			205 206 207 208 209 210 211 212 213 214 215 216 217 218 
+
+	 lastWritten(127), lastSent(89), lastAck(75)
+	 38 bytes left in buffer
+
+0:51:53.293869231 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 80, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Expecting sequence number 70, received 80
+Resending ACK to 2:2 for sequence 80
+
+0:51:53.464309803 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 42, ack: 80, flags: 2, ad_win: 128
+0:51:53.464309803 DEBUG (2): ACK received from 1:128 for sequence number 80
+!!!!!!	!!!!!Okay to send at index 90
+
+(2) Transport Send Timer Fired!
+	Socket 1
+	 lastWritten(127), lastSent(89), lastAck(89)
+	 38 bytes to send
+		Sending 14 bytes to address: 1, port: 128 with sequence 81
+			219 220 221 222 223 224 225 226 227 228 229 230 231 232 
+
+	 lastWritten(127), lastSent(103), lastAck(89)
+	 24 bytes left in buffer
+
+0:52:57.480087552 DEBUG (1): TCP Payload: src_port: 2, dest_port: 128, seq: 81, ack: 0, flags: 0, ad_win: 14
+Received data from 2:2!
+Expecting sequence number 70, received 81
+Resending ACK to 2:2 for sequence 81
+
+0:52:57.569122446 DEBUG (2): TCP Payload: src_port: 128, dest_port: 2, seq: 43, ack: 81, flags: 2, ad_win: 128
+0:52:57.569122446 DEBUG (2): ACK received from 1:128 for sequence number 81
+!!!!!!	!!!!!Okay to send at index 104

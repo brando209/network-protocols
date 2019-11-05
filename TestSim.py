@@ -12,7 +12,12 @@ class TestSim:
     # COMMAND TYPES
     CMD_PING = 0
     CMD_NEIGHBOR_DUMP = 1
-    CMD_ROUTE_DUMP=3
+    CMD_ROUTE_DUMP = 3
+    CMD_TEST_CLIENT = 4
+    CMD_TEST_SERVER = 5
+    CMD_KILL = 6
+    CMD_APP_SERVER = 7
+    CMD_APP_CLIENT = 8
 
     # CHANNELS - see includes/channels.h
     COMMAND_CHANNEL="command";
@@ -124,7 +129,22 @@ class TestSim:
 
     def routeDMP(self, destination):
         self.sendCMD(self.CMD_ROUTE_DUMP, destination, "routing command");
-
+        
+    def cmdTestServer(self, address, port):
+        self.sendCMD(self.CMD_TEST_SERVER, address, "{0}".format(chr(port)));
+        
+    def cmdTestClient(self, address, dest, srcPort, destPort, transfer):
+        self.sendCMD(self.CMD_TEST_CLIENT, address, "{0}{1}{2}{3}".format(chr(dest), chr(srcPort), chr(destPort), chr(transfer)));
+        
+    def cmdClientClose(self, address, dest, srcPort, destPort):
+    		self.sendCMD(self.CMD_KILL, address, "{0}{1}{2}".format(chr(dest), chr(srcPort), chr(destPort)));
+    		
+    def cmdAppClient(self, address, command):
+    		self.sendCMD(self.CMD_APP_CLIENT, address, "{0}".format(command));
+    
+    def cmdAppServer(self, address, port):
+    		self.sendCMD(self.CMD_APP_SERVER, address, "{0}".format(chr(port)));
+    		
     def addChannel(self, channelName, out=sys.stdout):
         print 'Adding Channel', channelName;
         self.t.addChannel(channelName, out);
@@ -137,12 +157,34 @@ def main():
     s.bootAll();
     s.addChannel(s.COMMAND_CHANNEL);
     s.addChannel(s.GENERAL_CHANNEL);
+    #TODO: Make all project #1 outputs to these channels
+    s.addChannel(s.NEIGHBOR_CHANNEL);
+    s.addChannel(s.FLOODING_CHANNEL);s
+    #TODO: Make all project #2 outputs to this channel
+    #s.addChannel(s.ROUTING_CHANNEL);
+    #TODO: Make all project #3 outputs to this channel
+    s.addChannel(s.TRANSPORT_CHANNEL);	
+    
+    s.runTime(40);
+    print ''
+    s.cmdAppServer(1, 41);
+    s.runTime(100);
+    
+    s.cmdAppClient(2, "hello bmccarthy 7");
+    s.runTime(200);
+    s.cmdAppClient(5, "hello ayadav 2");
+    s.runTime(300);
+    s.cmdAppClient(3, "hello acerpa 99");
+    s.runTime(300);
+    s.cmdAppClient(2, "whisper bmccarthy2 Hi!");
+    s.runTime(300);
+    s.cmdAppClient(2, "msg Hello World!!!!");
+    s.runTime(300);
+    s.cmdAppClient(5, "whisper bmccarthy Yo!!!");
+    s.runTime(300);
+    s.cmdAppClient(5, "listusr");
+    s.runTime(2000);
 
-    s.runTime(20);
-    s.ping(1, 2, "Hello, World");
-    s.runTime(10);
-    s.ping(1, 3, "Hi!");
-    s.runTime(20);
 
 if __name__ == '__main__':
     main()

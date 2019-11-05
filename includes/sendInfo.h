@@ -15,4 +15,9 @@ typedef struct sendInfo{
 	uint16_t dest;
 }sendInfo;
 
+typedef struct neighbor {
+		uint8_t id;
+		uint8_t TTL;
+}neighbor;
+
 #endif /* PACK_BUFFER_H */

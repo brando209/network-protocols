@@ -1,4 +1,4 @@
-#include "../../packet.h"
+#include "../../includes/packet.h"
 #include "../../includes/socket.h"
 
 /**
@@ -53,6 +53,8 @@ interface Transport{
     *    if not return a null socket.
     */
    command socket_t accept(socket_t fd);
+	
+	event error_t acceptDone(socket_t fd);
 
    /**
     * Write to the socket from a buffer. This data will eventually be
@@ -67,7 +69,7 @@ interface Transport{
     *       submit.
     * @Side For your project, only client side. This could be both though.
     * @return uint16_t - return the amount of data you are able to write
-    *    from the pass buffer. This may be shorter then bufflen
+    *    from the passed buffer. This may be shorter then bufflen
     */
    command uint16_t write(socket_t fd, uint8_t *buff, uint16_t bufflen);
 
@@ -94,7 +96,7 @@ interface Transport{
     *       buffer.
     * @Side For your project, only server side. This could be both though.
     * @return uint16_t - return the amount of data you are able to read
-    *    from the pass buffer. This may be shorter then bufflen
+    *    from the passed buffer. This may be shorter then bufflen
     */
    command uint16_t read(socket_t fd, uint8_t *buff, uint16_t bufflen);
 
@@ -112,6 +114,8 @@ interface Transport{
     */
    command error_t connect(socket_t fd, socket_addr_t * addr);
 
+	event error_t connectDone(socket_t fd);
+	  
    /**
     * Closes the socket.
     * @param
@@ -138,10 +142,14 @@ interface Transport{
     * Listen to the socket and wait for a connection.
     * @param
     *    socket_t fd: file descriptor that is associated with the socket
-    *       that you are hard closing. 
+    *       that you are listening on. 
     * @side Server
     * @return error_t - returns SUCCESS if you are able change the state 
-    *   to listen else FAIL.
+    *   to listen else FAIL.	
     */
    command error_t listen(socket_t fd);
+   
+   command socket_t getSocketFd(uint8_t port);
+   
+   command socket_store_t getSocket(socket_t fd);
 }

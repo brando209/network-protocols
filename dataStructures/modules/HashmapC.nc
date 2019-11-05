@@ -42,7 +42,7 @@ implementation{
       uint32_t i=0;	uint32_t j=0;
 
       if(k == EMPTY_KEY){
-          dbg(HASHMAP_CHANNEL, "[HASHMAP] You cannot insert a key of %d.", EMPTY_KEY);
+          dbg(HASHMAP_CHANNEL, "[HASHMAP] You cannot insert a key of %d.\n", EMPTY_KEY);
           return;
       }
 
@@ -124,6 +124,11 @@ implementation{
 	}
 
 
+   }
+   
+   command void Hashmap.update(uint32_t key, t input) {
+   	call Hashmap.remove(key);
+   	call Hashmap.insert(key, input);
    }
 
    

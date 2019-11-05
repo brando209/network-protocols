@@ -6,7 +6,7 @@ INCLUDE+=-IdataStructures/interfaces/ -IdataStructures/modules
 INCLUDE+=-Ilib/interfaces -Ilib/modules
 CFLAGS += -DTOSH_DATA_LENGTH=28
 CFLAGS+=$(INCLUDE)
-
+TINYOS_ROOT_DIR+=/home/brando/spring2019/CSE160/tinyOS/tiny/tinyos-main
 include $(TINYOS_ROOT_DIR)/Makefile.include
 
 CommandMsg.py: CommandMsg.h
